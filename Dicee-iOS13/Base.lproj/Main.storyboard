@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,36 +25,43 @@
                                 <rect key="frame" x="109" y="64" width="196" height="128"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="IHD-LW-tf9">
-                                <rect key="frame" x="20" y="398" width="100" height="100"/>
+                                <rect key="frame" x="30" y="398" width="100" height="100"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="PsG-ef-B2L">
-                                <rect key="frame" x="294" y="398" width="100" height="100"/>
+                                <rect key="frame" x="284" y="398" width="100" height="100"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mW9-cJ-iXe">
-                                <rect key="frame" x="20" y="714" width="374" height="48"/>
+                                <rect key="frame" x="30" y="714" width="354" height="48"/>
                                 <color key="backgroundColor" red="0.60627448559999997" green="0.1105902269" blue="0.12154255059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Roll">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchRoll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogm-I4-wdZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ts8-WE-wbN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2E0-fo-c2C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsG-ef-B2L" secondAttribute="trailing" constant="20" id="5wd-DL-3sr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PsG-ef-B2L" secondAttribute="trailing" constant="30" id="5wd-DL-3sr"/>
                             <constraint firstItem="PsG-ef-B2L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="64Y-fC-Tdo"/>
                             <constraint firstItem="Ts8-WE-wbN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cbg-WC-I1h"/>
-                            <constraint firstItem="mW9-cJ-iXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ei0-bi-hOo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mW9-cJ-iXe" secondAttribute="trailing" constant="20" id="TJ6-sX-hV4"/>
+                            <constraint firstItem="mW9-cJ-iXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ei0-bi-hOo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mW9-cJ-iXe" secondAttribute="trailing" constant="30" id="TJ6-sX-hV4"/>
                             <constraint firstItem="mW9-cJ-iXe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fLk-cQ-ThR"/>
-                            <constraint firstItem="IHD-LW-tf9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qo4-ap-MIl"/>
+                            <constraint firstItem="IHD-LW-tf9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qo4-ap-MIl"/>
                             <constraint firstItem="IHD-LW-tf9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rEe-rK-L4e"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mW9-cJ-iXe" secondAttribute="bottom" constant="100" id="zIb-Wt-yoh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImageLeft" destination="IHD-LW-tf9" id="oU2-AY-m7h"/>
+                        <outlet property="diceImageRight" destination="PsG-ef-B2L" id="hBZ-eP-11A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
